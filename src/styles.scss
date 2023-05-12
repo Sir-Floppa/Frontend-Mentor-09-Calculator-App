@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "League Spartan", sans-serif;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #e6e6e6;
+    color: #34352c;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #3b4664;
+    color: white;
+  }
+}
