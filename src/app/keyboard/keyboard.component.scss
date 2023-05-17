@@ -1,0 +1,81 @@
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  grid-template-areas: 
+    "keyboard keyboard keyboard keyboard"
+    "keyboard keyboard keyboard keyboard"
+    "keyboard keyboard keyboard keyboard"
+    "keyboard keyboard keyboard keyboard"
+    "reset-btn reset-btn equal-btn equal-btn";
+
+  button {
+    border-radius: .5rem;
+    place-self: center stretch;
+    aspect-ratio: 1 / 1;
+    outline: none;
+    border: none;
+    filter: drop-shadow(0 4px 0 #a79d93);
+    background-color: #e5e4df;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #btn-reset, #btn-equal {
+    aspect-ratio: unset;
+    height: 3.5rem;
+  }
+  
+  .smaller-text {
+    font-size: 1.5rem;
+  }
+
+  #btn-reset {
+    grid-area: reset-btn;
+  }
+
+  #btn-equal {
+    grid-area: equal-btn;
+  }
+
+  .btn-green, .btn-red  {
+    color: white;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .keyboard {
+    background-color: #d3cdcd;
+
+    .btn-green {
+      background-color: #388187;
+      filter: drop-shadow(0 4px 0 #1a5d65);
+    }
+
+    .btn-red {
+      background-color: #c85401;
+      filter: drop-shadow(0 4px 0 #863700);
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .keyboard {
+    background-color: #252d44;
+    
+    .btn-green {
+      background-color: #647299;
+      filter: drop-shadow(0 4px 0 #424e75);
+    }
+
+    .btn-red {
+      background-color: #d13f30;
+      filter: drop-shadow(0 4px 0 #8f2316);
+    }
+  }
+}
